@@ -18,10 +18,12 @@ public class Main {
                 String result = "Корректный IP адрес: " + m.group();
                 fileWriter.write(result);
                 fileWriter.flush();
+                fileWriter.close();
             }
             else{
                 fileWriter.write("Корректные IP-адресы не найдены.");
                 fileWriter.flush();
+                fileWriter.close();
             }
         }
         catch(IOException ex){
